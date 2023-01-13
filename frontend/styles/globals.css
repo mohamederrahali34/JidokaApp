@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "Avenir";
+    src: url('/avenir_ff/AvenirLTStd-Black.otf');
+    src: url('/avenir_ff/AvenirLTStd-Book.otf');
+    src: url('/avenir_ff/AvenirLTStd-Roman.otf');
+}
+
+@font-face {
+    font-family: "Circular Std";
+    font-weight: 500;
+    src: url("/circular-std-medium-500.ttf") format('truetype');
+}
+
+body {
+    font-family: 'Avenir';
+    src: url('/avenir_ff/AvenirLTStd-Black.otf');
+    src: url('/avenir_ff/AvenirLTStd-Book.otf');
+    src: url('/avenir_ff/AvenirLTStd-Roman.otf');
+}

@@ -1,0 +1,36 @@
+databaseChangeLog:databaseChangeLog:
+- changeSet:
+    id: 1653648350153-1
+    author: HP (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: consecutiveFailures
+            type: varchar(255)
+        tableName: webhooks
+- changeSet:
+    id: 1653648350153-2
+    author: HP (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: idModel
+            type: varchar(255)
+        tableName: webhooks
+- changeSet:
+    id: 1653648350153-3
+    author: HP (generated)
+    changes:
+    - dropColumn:
+        columnName: consecutive_failures
+        tableName: webhooks
+- changeSet:
+    id: 1653648350153-4
+    author: HP (generated)
+    changes:
+    - dropColumn:
+        columnName: id_model
+        tableName: webhooks
+

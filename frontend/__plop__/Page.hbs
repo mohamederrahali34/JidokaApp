@@ -1,0 +1,14 @@
+import type { NextPage } from "~types/next";
+
+import { NextSeo } from "next-seo";
+
+const {{pascalCase name}}Page: NextPage = () => {
+  return (
+    <div>
+      <NextSeo title="{{pascalCase name}}" />
+      {{name}}
+    </div>
+  );
+};
+
+export default {{pascalCase name}}Page;

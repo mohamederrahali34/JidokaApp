@@ -1,0 +1,25 @@
+default:
+  image: node:14-alpine3.13
+  interruptible: true
+
+variables:
+  FF_USE_FASTZIP: "true"
+  ARTIFACT_COMPRESSION_LEVEL: "fast"
+  CACHE_COMPRESSION_LEVEL: "fast"
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/backend/.m2/repository -Djava.awt.headless=true"
+  MAVEN_CLI_OPTS: "--batch-mode --fail-at-end"
+
+stages:
+  - install
+  - test
+  - build
+  - visualize
+
+workflow:
+  rules:
+    - if: "$CI_MERGE_REQUEST_IID"
+    - if: "$CI_COMMIT_BRANCH =~ /^(main)$/"
+
+include:
+  - local: backend/.gitlab-ci.yml
+  - local: frontend/.gitlab-ci.yml
